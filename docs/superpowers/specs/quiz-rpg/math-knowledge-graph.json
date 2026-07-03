@@ -1,0 +1,865 @@
+{
+  "meta": {
+    "title": "通用数学知识图谱",
+    "scope": "小学到高中主干数学知识",
+    "granularity": "medium",
+    "graph_type": "directed_acyclic_graph",
+    "notes": [
+      "不绑定教材版本",
+      "stage 只表示常见首次系统学习阶段，不表示严格年级",
+      "prerequisites 只保留主干前置关系，不覆盖所有可选学习路径"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "num_natural_numbers",
+      "name": "自然数与数数",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": []
+    },
+    {
+      "id": "num_addition_subtraction",
+      "name": "加法与减法",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_natural_numbers"
+      ]
+    },
+    {
+      "id": "num_multiplication_division",
+      "name": "乘法与除法",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_addition_subtraction"
+      ]
+    },
+    {
+      "id": "num_order_of_operations",
+      "name": "四则运算与运算顺序",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_addition_subtraction",
+        "num_multiplication_division"
+      ]
+    },
+    {
+      "id": "num_quantities_units",
+      "name": "常见量与单位换算",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_natural_numbers",
+        "num_addition_subtraction"
+      ]
+    },
+    {
+      "id": "num_factors_multiples_primes",
+      "name": "因数、倍数与质数",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_multiplication_division"
+      ]
+    },
+    {
+      "id": "num_fractions_concept",
+      "name": "分数概念",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_multiplication_division"
+      ]
+    },
+    {
+      "id": "num_equivalent_fractions_comparison",
+      "name": "分数大小比较与等值分数",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_fractions_concept",
+        "num_factors_multiples_primes"
+      ]
+    },
+    {
+      "id": "num_fraction_operations",
+      "name": "分数四则运算",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_equivalent_fractions_comparison",
+        "num_order_of_operations"
+      ]
+    },
+    {
+      "id": "num_decimals_concept",
+      "name": "小数概念",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_fractions_concept"
+      ]
+    },
+    {
+      "id": "num_decimal_operations",
+      "name": "小数四则运算",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_decimals_concept",
+        "num_order_of_operations"
+      ]
+    },
+    {
+      "id": "num_ratio_proportion",
+      "name": "比、比例与按比例分配",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_fraction_operations",
+        "num_decimal_operations"
+      ]
+    },
+    {
+      "id": "num_percentage",
+      "name": "百分数",
+      "stage": "primary",
+      "domain": "number",
+      "prerequisites": [
+        "num_ratio_proportion",
+        "num_decimal_operations"
+      ]
+    },
+    {
+      "id": "alg_simple_equations",
+      "name": "用逆运算解简单方程",
+      "stage": "primary",
+      "domain": "algebra",
+      "prerequisites": [
+        "num_order_of_operations"
+      ]
+    },
+    {
+      "id": "alg_pattern_rules",
+      "name": "数与图形的简单规律",
+      "stage": "primary",
+      "domain": "algebra",
+      "prerequisites": [
+        "num_addition_subtraction",
+        "num_multiplication_division"
+      ]
+    },
+    {
+      "id": "geo_plane_figures",
+      "name": "平面图形初步认识",
+      "stage": "primary",
+      "domain": "geometry",
+      "prerequisites": []
+    },
+    {
+      "id": "geo_perimeter",
+      "name": "周长",
+      "stage": "primary",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_plane_figures",
+        "num_addition_subtraction"
+      ]
+    },
+    {
+      "id": "geo_area_basic_shapes",
+      "name": "长方形、正方形及基础组合图形面积",
+      "stage": "primary",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_plane_figures",
+        "num_multiplication_division"
+      ]
+    },
+    {
+      "id": "geo_volume_cuboids",
+      "name": "长方体与正方体体积",
+      "stage": "primary",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_area_basic_shapes",
+        "num_multiplication_division"
+      ]
+    },
+    {
+      "id": "stat_tables_averages",
+      "name": "统计表、统计图与平均数初步",
+      "stage": "primary",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "num_addition_subtraction",
+        "num_multiplication_division"
+      ]
+    },
+    {
+      "id": "stat_probability_intuition",
+      "name": "可能性直观认识",
+      "stage": "primary",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "num_ratio_proportion"
+      ]
+    },
+    {
+      "id": "num_integers_number_line",
+      "name": "正数、负数与数轴",
+      "stage": "junior",
+      "domain": "number",
+      "prerequisites": [
+        "num_natural_numbers"
+      ]
+    },
+    {
+      "id": "num_rational_numbers",
+      "name": "有理数",
+      "stage": "junior",
+      "domain": "number",
+      "prerequisites": [
+        "num_integers_number_line",
+        "num_fractions_concept",
+        "num_decimals_concept"
+      ]
+    },
+    {
+      "id": "alg_powers_roots_scientific",
+      "name": "幂、算术平方根与科学记数法",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "num_multiplication_division",
+        "num_rational_numbers"
+      ]
+    },
+    {
+      "id": "num_real_numbers_square_roots",
+      "name": "实数与平方根",
+      "stage": "junior",
+      "domain": "number",
+      "prerequisites": [
+        "alg_powers_roots_scientific",
+        "num_rational_numbers"
+      ]
+    },
+    {
+      "id": "alg_expressions",
+      "name": "整式与代数式",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_pattern_rules",
+        "alg_simple_equations",
+        "num_rational_numbers"
+      ]
+    },
+    {
+      "id": "alg_linear_equations_one_variable",
+      "name": "一元一次方程",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_expressions",
+        "alg_simple_equations"
+      ]
+    },
+    {
+      "id": "alg_linear_inequalities_one_variable",
+      "name": "一元一次不等式",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_linear_equations_one_variable"
+      ]
+    },
+    {
+      "id": "alg_linear_systems",
+      "name": "二元一次方程组",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_linear_equations_one_variable",
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "alg_factorization",
+      "name": "因式分解",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_expressions",
+        "alg_powers_roots_scientific"
+      ]
+    },
+    {
+      "id": "alg_algebraic_fractions",
+      "name": "分式",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_factorization",
+        "alg_expressions",
+        "num_equivalent_fractions_comparison"
+      ]
+    },
+    {
+      "id": "alg_radicals",
+      "name": "二次根式及其运算",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "num_real_numbers_square_roots",
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "alg_quadratic_equations",
+      "name": "一元二次方程",
+      "stage": "junior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_factorization",
+        "alg_linear_equations_one_variable",
+        "num_real_numbers_square_roots"
+      ]
+    },
+    {
+      "id": "ag_cartesian_plane",
+      "name": "平面直角坐标系",
+      "stage": "junior",
+      "domain": "analytic_geometry",
+      "prerequisites": [
+        "num_integers_number_line",
+        "geo_plane_figures"
+      ]
+    },
+    {
+      "id": "func_proportional",
+      "name": "正比例函数",
+      "stage": "junior",
+      "domain": "function",
+      "prerequisites": [
+        "num_ratio_proportion",
+        "ag_cartesian_plane",
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "func_inverse_proportion",
+      "name": "反比例函数",
+      "stage": "junior",
+      "domain": "function",
+      "prerequisites": [
+        "num_ratio_proportion",
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "func_linear",
+      "name": "一次函数",
+      "stage": "junior",
+      "domain": "function",
+      "prerequisites": [
+        "alg_linear_systems",
+        "ag_cartesian_plane",
+        "func_proportional"
+      ]
+    },
+    {
+      "id": "func_quadratic",
+      "name": "二次函数",
+      "stage": "junior",
+      "domain": "function",
+      "prerequisites": [
+        "alg_quadratic_equations",
+        "ag_cartesian_plane",
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "geo_lines_angles_parallel",
+      "name": "点、线、角与平行线",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_plane_figures"
+      ]
+    },
+    {
+      "id": "geo_triangles",
+      "name": "三角形",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_lines_angles_parallel"
+      ]
+    },
+    {
+      "id": "geo_congruent_triangles",
+      "name": "全等三角形",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_triangles"
+      ]
+    },
+    {
+      "id": "geo_quadrilaterals",
+      "name": "四边形",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_lines_angles_parallel",
+        "geo_triangles"
+      ]
+    },
+    {
+      "id": "geo_transformations_symmetry",
+      "name": "平移、轴对称与旋转",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_plane_figures",
+        "ag_cartesian_plane"
+      ]
+    },
+    {
+      "id": "geo_similar_triangles",
+      "name": "相似三角形",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_triangles",
+        "num_ratio_proportion"
+      ]
+    },
+    {
+      "id": "geo_pythagorean_theorem",
+      "name": "勾股定理",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_triangles",
+        "geo_area_basic_shapes"
+      ]
+    },
+    {
+      "id": "geo_circles",
+      "name": "圆的基本概念",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_plane_figures",
+        "geo_lines_angles_parallel"
+      ]
+    },
+    {
+      "id": "geo_circle_properties",
+      "name": "圆的性质与位置关系",
+      "stage": "junior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_circles",
+        "geo_congruent_triangles",
+        "geo_similar_triangles"
+      ]
+    },
+    {
+      "id": "stat_descriptive_statistics",
+      "name": "数据收集与描述性统计",
+      "stage": "junior",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "stat_tables_averages",
+        "num_rational_numbers"
+      ]
+    },
+    {
+      "id": "stat_theoretical_probability",
+      "name": "古典概率初步",
+      "stage": "junior",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "stat_probability_intuition",
+        "num_ratio_proportion"
+      ]
+    },
+    {
+      "id": "logic_sets_logic",
+      "name": "集合与常用逻辑用语",
+      "stage": "senior",
+      "domain": "logic",
+      "prerequisites": [
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "func_concept_representation",
+      "name": "函数概念与表示法",
+      "stage": "senior",
+      "domain": "function",
+      "prerequisites": [
+        "logic_sets_logic",
+        "func_linear",
+        "func_quadratic"
+      ]
+    },
+    {
+      "id": "func_properties_transformations",
+      "name": "函数性质与图像变换",
+      "stage": "senior",
+      "domain": "function",
+      "prerequisites": [
+        "func_concept_representation",
+        "geo_transformations_symmetry"
+      ]
+    },
+    {
+      "id": "alg_exponents_power_rules",
+      "name": "指数扩展与幂运算法则",
+      "stage": "senior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_powers_roots_scientific",
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "alg_logarithms",
+      "name": "对数",
+      "stage": "senior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_exponents_power_rules"
+      ]
+    },
+    {
+      "id": "func_exponential",
+      "name": "指数函数",
+      "stage": "senior",
+      "domain": "function",
+      "prerequisites": [
+        "func_concept_representation",
+        "alg_exponents_power_rules"
+      ]
+    },
+    {
+      "id": "func_logarithmic",
+      "name": "对数函数",
+      "stage": "senior",
+      "domain": "function",
+      "prerequisites": [
+        "func_concept_representation",
+        "alg_logarithms"
+      ]
+    },
+    {
+      "id": "trig_ratios",
+      "name": "锐角三角比",
+      "stage": "senior",
+      "domain": "trigonometry",
+      "prerequisites": [
+        "geo_similar_triangles",
+        "geo_pythagorean_theorem"
+      ]
+    },
+    {
+      "id": "trig_functions",
+      "name": "三角函数",
+      "stage": "senior",
+      "domain": "trigonometry",
+      "prerequisites": [
+        "func_concept_representation",
+        "trig_ratios",
+        "ag_cartesian_plane"
+      ]
+    },
+    {
+      "id": "trig_identities_graphs",
+      "name": "三角恒等变换与图像",
+      "stage": "senior",
+      "domain": "trigonometry",
+      "prerequisites": [
+        "trig_functions",
+        "func_properties_transformations"
+      ]
+    },
+    {
+      "id": "trig_sine_cosine_laws",
+      "name": "正弦定理与余弦定理",
+      "stage": "senior",
+      "domain": "trigonometry",
+      "prerequisites": [
+        "trig_ratios",
+        "geo_triangles"
+      ]
+    },
+    {
+      "id": "alg_sequences",
+      "name": "数列概念",
+      "stage": "senior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_pattern_rules",
+        "func_concept_representation"
+      ]
+    },
+    {
+      "id": "alg_arithmetic_geometric_sequences",
+      "name": "等差数列与等比数列",
+      "stage": "senior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_sequences",
+        "num_ratio_proportion"
+      ]
+    },
+    {
+      "id": "alg_quadratic_inequalities",
+      "name": "一元二次不等式",
+      "stage": "senior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_quadratic_equations",
+        "alg_linear_inequalities_one_variable"
+      ]
+    },
+    {
+      "id": "alg_complex_numbers",
+      "name": "复数初步",
+      "stage": "senior",
+      "domain": "algebra",
+      "prerequisites": [
+        "alg_quadratic_equations"
+      ]
+    },
+    {
+      "id": "logic_mathematical_induction",
+      "name": "数学归纳法",
+      "stage": "senior",
+      "domain": "logic",
+      "prerequisites": [
+        "logic_sets_logic",
+        "alg_sequences"
+      ]
+    },
+    {
+      "id": "stat_counting_principle",
+      "name": "分类加法计数原理与分步乘法计数原理",
+      "stage": "senior",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "num_multiplication_division",
+        "logic_sets_logic"
+      ]
+    },
+    {
+      "id": "stat_permutations_combinations",
+      "name": "排列与组合",
+      "stage": "senior",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "stat_counting_principle"
+      ]
+    },
+    {
+      "id": "alg_binomial_theorem",
+      "name": "二项式定理",
+      "stage": "senior",
+      "domain": "algebra",
+      "prerequisites": [
+        "stat_permutations_combinations",
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "stat_probability_models",
+      "name": "概率模型与事件运算",
+      "stage": "senior",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "stat_theoretical_probability",
+        "stat_permutations_combinations",
+        "func_concept_representation"
+      ]
+    },
+    {
+      "id": "stat_random_variables",
+      "name": "随机变量与分布",
+      "stage": "senior",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "stat_probability_models",
+        "func_concept_representation"
+      ]
+    },
+    {
+      "id": "stat_statistical_inference",
+      "name": "统计估计与推断初步",
+      "stage": "senior",
+      "domain": "statistics_probability",
+      "prerequisites": [
+        "stat_descriptive_statistics",
+        "stat_probability_models"
+      ]
+    },
+    {
+      "id": "vec_basic",
+      "name": "向量概念",
+      "stage": "senior",
+      "domain": "vectors",
+      "prerequisites": [
+        "ag_cartesian_plane",
+        "alg_expressions"
+      ]
+    },
+    {
+      "id": "vec_operations",
+      "name": "向量运算",
+      "stage": "senior",
+      "domain": "vectors",
+      "prerequisites": [
+        "vec_basic"
+      ]
+    },
+    {
+      "id": "vec_plane_applications",
+      "name": "平面向量应用",
+      "stage": "senior",
+      "domain": "vectors",
+      "prerequisites": [
+        "vec_operations",
+        "geo_triangles"
+      ]
+    },
+    {
+      "id": "geo_spatial_geometry_basics",
+      "name": "立体几何初步",
+      "stage": "senior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_plane_figures",
+        "geo_triangles",
+        "geo_quadrilaterals"
+      ]
+    },
+    {
+      "id": "geo_line_plane_relations",
+      "name": "空间直线与平面位置关系",
+      "stage": "senior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_spatial_geometry_basics"
+      ]
+    },
+    {
+      "id": "geo_spatial_measurement",
+      "name": "空间角、距离与体积度量",
+      "stage": "senior",
+      "domain": "geometry",
+      "prerequisites": [
+        "geo_line_plane_relations",
+        "geo_volume_cuboids",
+        "trig_ratios"
+      ]
+    },
+    {
+      "id": "ag_two_variable_inequalities_regions",
+      "name": "二元一次不等式与平面区域",
+      "stage": "senior",
+      "domain": "analytic_geometry",
+      "prerequisites": [
+        "alg_linear_inequalities_one_variable",
+        "ag_cartesian_plane"
+      ]
+    },
+    {
+      "id": "ag_linear_programming",
+      "name": "线性规划初步",
+      "stage": "senior",
+      "domain": "analytic_geometry",
+      "prerequisites": [
+        "ag_two_variable_inequalities_regions",
+        "func_linear"
+      ]
+    },
+    {
+      "id": "ag_line",
+      "name": "直线的解析几何",
+      "stage": "senior",
+      "domain": "analytic_geometry",
+      "prerequisites": [
+        "func_concept_representation",
+        "ag_cartesian_plane"
+      ]
+    },
+    {
+      "id": "ag_circle",
+      "name": "圆的解析几何",
+      "stage": "senior",
+      "domain": "analytic_geometry",
+      "prerequisites": [
+        "ag_line",
+        "geo_circles"
+      ]
+    },
+    {
+      "id": "ag_conics",
+      "name": "圆锥曲线",
+      "stage": "senior",
+      "domain": "analytic_geometry",
+      "prerequisites": [
+        "ag_circle",
+        "func_quadratic"
+      ]
+    },
+    {
+      "id": "calc_limits_rate_change",
+      "name": "极限直观与变化率",
+      "stage": "senior",
+      "domain": "calculus",
+      "prerequisites": [
+        "func_properties_transformations",
+        "alg_sequences"
+      ]
+    },
+    {
+      "id": "calc_derivative_concept",
+      "name": "导数概念",
+      "stage": "senior",
+      "domain": "calculus",
+      "prerequisites": [
+        "calc_limits_rate_change",
+        "func_concept_representation"
+      ]
+    },
+    {
+      "id": "calc_derivative_applications",
+      "name": "导数应用",
+      "stage": "senior",
+      "domain": "calculus",
+      "prerequisites": [
+        "calc_derivative_concept",
+        "func_properties_transformations",
+        "ag_line"
+      ]
+    },
+    {
+      "id": "calc_integral_intuition_area",
+      "name": "积分直观与面积累积",
+      "stage": "senior",
+      "domain": "calculus",
+      "prerequisites": [
+        "calc_derivative_concept",
+        "geo_area_basic_shapes"
+      ]
+    }
+  ]
+}
